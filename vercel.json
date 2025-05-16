@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "react/currency_convertor/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "react/currency_convertor/build" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/react/currency_convertor/$1" }
+  ]
+}
